@@ -83,7 +83,7 @@ if not all_failed_flows:
 
     mail = outlook_app.CreateItem(0)
 
-    mail.To = "your_email@iqvia.com"
+    mail.To = "Global-PRM-SUPPORT-INTERNAL@iqvia.com"
 
     mail.Subject = (
         f"[IQ6-Abbvie] Top Failed Flows Report | "
@@ -228,7 +228,7 @@ outlook_app = win32com.client.Dispatch(
 mail = outlook_app.CreateItem(0)
 
 # UPDATE RECIPIENTS
-mail.To = "hashwanth.kumar@iqvia.com"
+mail.To = "Global-PRM-SUPPORT-INTERNAL@iqvia.com"
 
 # Optional
 # mail.CC = "team@iqvia.com"
