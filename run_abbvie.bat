@@ -1,19 +1,13 @@
 @echo off
 
-echo Started %date% %time% > task_test.log
+start "" "C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE"
 
 cd /d D:\Automation\Abbvie-PMF-Automation
 
-echo Changed directory >> task_test.log
-
-git pull >> task_test.log 2>&1
+git pull
 
 call venv\Scripts\activate.bat
 
-echo Venv activated >> task_test.log
-
-python PowerFlowSummary.py >> task_test.log 2>&1
-
-echo Finished >> task_test.log
+python PowerFlowSummary.py >> execution.log 2>&1
 
 exit
